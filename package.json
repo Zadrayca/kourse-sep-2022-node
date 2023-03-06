@@ -1,0 +1,11 @@
+{
+  "name": "kourse-sep-2022-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Zadrayca/kourse-sep-2022-node.git",
+  "author": "Zadrayca <coxatiy@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
