@@ -5,9 +5,15 @@ import { ICommonResponse, IMessage, IUser } from "../types/user.types";
 
 class UserController {
   public async getAll(req: Request, res: Response): Promise<Response<IUser[]>> {
-    const users = await User.find();
+    try {
+      const users = await User.find();
 
-    return res.json(users);
+      return res.json(users);
+    } catch (e) {
+      res.json({
+        message: e.message,
+      });
+    }
   }
 
   public async getById(req: Request, res: Response): Promise<Response<IUser>> {
